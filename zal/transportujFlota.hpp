@@ -1,8 +1,7 @@
 #pragma once
 
-#include "include/Stocznia.hpp"
 #include <vector>
-
+#include <Stocznia.hpp>
 unsigned int transportujFlota(unsigned int towar)
 {
     // Twoja implementacja tutaj
