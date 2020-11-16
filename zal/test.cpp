@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "include/catch.hpp"
 
 #include "transportujFlota.hpp"
 
@@ -20,8 +20,8 @@ TEST_CASE("test", "[]")
     for (const auto& towar : towary) {
         const auto zaglowce = transportujFlota(towar);
 
-        CHECK(zaglowce == CountThis< Zaglowiec >::get()); // wartoœæ zwrócona
-        CHECK(towar <= Stocznia::getTotalCap()); // przewieziony towar
+        CHECK(zaglowce == CountThis< Zaglowiec >::get()); // wartoï¿½ zwrï¿½cona
+        CHECK(towar <= Stocznia::getTotalCap());          // przewieziony towar
 
         CountThis< Zaglowiec >::reset();
         Stocznia::resetTotalCap();
