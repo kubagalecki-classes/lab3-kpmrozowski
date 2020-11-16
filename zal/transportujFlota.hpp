@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <Stocznia.hpp>
+#include "include/Stocznia.hpp"
 unsigned int transportujFlota(unsigned int towar)
 {
     // Twoja implementacja tutaj
@@ -10,7 +10,6 @@ unsigned int transportujFlota(unsigned int towar)
     //Statek*  s1 = stocznia();
     std::cout << "towar = " << towar << std::endl;
     std::cout << "Stocznia::getTotalCap() = " << Stocznia::getTotalCap() << std::endl << std::endl;
-    unsigned int zaglowce;
     
     for (int i = 1; towar >= Stocznia::getTotalCap(); i++) {
         Statek* s = stocznia();
@@ -25,7 +24,7 @@ unsigned int transportujFlota(unsigned int towar)
         std::cout << " Stocznia::getTotalCap() = " << Stocznia::getTotalCap() << "\n";
 				delete s;
     }
-    zaglowce = CountThis< Zaglowiec >::get();
+    unsigned int zaglowce = CountThis< Zaglowiec >::get();
     std::cout << "Zaglowce: " << zaglowce << "\n";
     myShips.clear();
     return zaglowce;
